@@ -1,3 +1,189 @@
 //====================================================================================================
+.page {
+}
+.find {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+		// .find__container
 
+		&__container {
+            display: grid;
+            grid-template-columns: repeat(2, rem(900));
+            position: relative;
+    
+		}
+
+		// .find__left
+
+		&__left {
+           
+            
+		}
+
+		// .find__content
+
+		&__content {
+            @include adaptiveValue("padding-left",202 , 50);
+            @include adaptiveValue("padding-right",38 ,20 );
+		}
+
+		// .find__ellips
+
+		&__ellips {
+            position: absolute;
+            top: 0;
+            left: rem(552);
+		}
+
+		// .find__title
+
+		&__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",56 ,24 );
+            @include adaptiveValue("line-height",68 ,29 );
+            color: #000000;
+            @include adaptiveValue("padding-top",260 , 40);
+            span{
+                color: #ED815E;
+            }
+		}
+
+		// .find__subtitle
+
+		&__subtitle {
+            font-style: normal;
+        font-weight: 400;
+        @include adaptiveValue("font-size",20 ,14 );
+        @include adaptiveValue("line-height",33 ,23 );
+        color: $colorText;
+        @include adaptiveValue("padding-right",170 ,50 );
+        @include adaptiveValue("padding-top",38 ,15 );
+		}
+
+		// .find__actions
+
+		&__actions {
+            display: flex;
+            gap: rem(33);
+            @include adaptiveValue("padding-top",48 ,28 );
+		}
+
+		// .find__button
+
+		&__button {
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: rem(33);
+            text-align: center;
+            padding: rem(20) rem(63);
+            background-color: #6E5DDC;
+            font-style: normal;
+            transition: all 0.3s ; 
+            @media (any-hover: hover){
+                &:hover{
+                    background-color: #ED815E;
+                    transition: all 0.3s ;                }
+            }
+		}
+
+		// .find__shop
+
+		&__shop {
+            display: flex;
+            align-items: center;
+
+		}
+        
+		// .find__link
+
+		&__link {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height",24 ,17 );
+            color: #F27E58;
+            text-decoration: none;
+            transition: all 0.3s ; 
+            padding-right: rem(8);
+            // display: flex;
+            // align-items: center;
+         
+		}
+
+		// .find__right
+
+		&__right {
+            position: relative;
+            background-color: #F9F9F9;
+            
+		}
+        &__img{
+            
+        }
+		// .find__
+
+		&__ {
+
+			// .find___image
+
+			&_image {
+			}
+		}
+        &__img{
+            z-index: 5;
+            position: relative;
+            padding-top: rem(130);
+        }
+		// .find__circle-big
+
+		&__circle-big {
+            position: absolute;
+            width: rem(523);
+            height: rem(523);
+            border-radius: 50%;
+            background-color: #8172DD;
+            top: rem(218);
+            left: rem(189);
+
+		}
+
+		// .find__circle-small
+
+		&__circle-small {
+            position: absolute;
+            width: rem(95);
+            height: rem(95);
+            border-radius: 50%;
+            background-color: #FFCA78;
+            top: rem(171);
+            right: rem(74);
+		}
+
+		// .find__decor
+
+		&__decor {
+            position: absolute;
+            top: rem(782);
+            left: rem(760);
+		}
+
+		// .find__elem
+
+		&__elem {
+		}
+}
+.ellips {
+}
+.button {
+}
+.shop__icon{
+    @media (any-hover: hover){
+        
+    }
+}
 //====================================================================================================

@@ -3,7 +3,9 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: rem(15) rem(30);
+	color: #FFFFFF;
+	border-radius: rem(100);
 	
 	@media (any-hover: hover) {
 		&:hover {
