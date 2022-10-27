@@ -1,1 +1,20 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button__blue{
+    display: inline-flex;
+	padding: rem(20) rem(63);
+	color: #FFFFFF;
+	border-radius: rem(100);
+    background-color: #6E5DDC;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: rem(33);
+    color: #FFFFFF;
+    transition: all 0.3s ; 
+            @media (any-hover: hover){
+                &:hover{
+                    background-color: #ED815E;
+                    transition: all 0.3s ;                }
+            }
+}
