@@ -51,11 +51,14 @@
             @include adaptiveValue("font-size",56 ,24 );
             @include adaptiveValue("line-height",68 ,29 );
             color: #000000;
-            @include adaptiveValue("padding-top",260 , 40);
+            @include adaptiveValue("padding-top",258.5 , 40);
             span{
                 color: #ED815E;
             }
 		}
+            @media (max-width:$mobile){
+                   text-align: center; 
+            }
 
 		// .find__subtitle
 
@@ -66,7 +69,7 @@
         @include adaptiveValue("line-height",33 ,23 );
         color: $colorText;
         @include adaptiveValue("padding-right",170 ,50 );
-        @include adaptiveValue("padding-top",38 ,15 );
+        @include adaptiveValue("padding-top",36 ,15 );
 		}
 
 		// .find__actions
@@ -100,6 +103,9 @@
 		&__shop {
             display: flex;
             align-items: center;
+            svg{
+                  padding-top: rem(5);
+            }
 
 		}
         
@@ -117,6 +123,7 @@
             padding-right: rem(8);
             // display: flex;
             // align-items: center;
+            padding-top: rem(5);
          
 		}
 
@@ -397,7 +404,10 @@ position: relative;
             position: absolute;
             top: rem(980);
             right: 0;
+            z-index: 5;
+            
       }
+
       // .tell__button
 
       &__button {
@@ -411,96 +421,410 @@ position: relative;
 
       &__container {
             padding-top: rem(300);
-            padding-left: rem(202);
+            padding-left: rem(167);
       }
 
       // .choose__swipe
 
       &__swipe {
+           
       }
 
       // .choose__slider
 
       &__slider {
-            width: rem(833);
+            width: rem(833); 
+            z-index: 5;
+            position: relative;
+            
       }
 
       // .choose__wrapper
 
       &__wrapper {
+       display: flex;
+       
+            
       }
 
       // .choose__slide
 
       &__slide {
+            
       }
 
       // .choose__card
 
       &__card {
-            background: #89D4A7;
-border-radius: 16px;
+
+            width: rem(400);
             border-radius: rem(16);
+            background-color: #89D4A7;
+            @include adaptiveValue("padding-top",65 ,30 );
       }
 
       // .choose__img
 
       &__img {
+            @include adaptiveValue("padding-left",107 ,68.6 );
       }
 
       // .choose__item
 
       &__item {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            @include adaptiveValue("font-size",14 ,12 );
+            @include adaptiveValue("line-height",19 ,16 );
+            color: #FFFFFF;
+            opacity: 0.5;
+            
       }
 
       // .choose__name
-
+      &__text{
+            padding-left: rem(30);
+            padding-right: rem(30);
+            padding-bottom: rem(40);
+            padding: rem(40) rem(30);
+      }
       &__name {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",24 ,18 );
+            @include adaptiveValue(" line-height",29 ,22 );
+            color: #FFFFFF;
+            padding-top: rem(12);
       }
 
       // .choose__descr
 
       &__descr {
+            
+            font-style: normal;
+            font-weight: 400;
+            @include adaptiveValue("font-size",16 ,14 );
+            @include adaptiveValue("line-height", 26, 14);
+            color: #FFFFFF;
+            opacity: 0.7;
+            padding-top: rem(20);
       }
 
       // .choose__card-bg
 
       &__card-bg {
+            background-color: #9C91E0;
       }
 
       // .choose__blok
 
       &__blok {
+            
+            @include adaptiveValue("width", 900, 320);
+            @include adaptiveValue("height",825 ,370 );
+            @include adaptiveValue("padding-top",234 ,59 );
+            @include adaptiveValue("padding-left",254 ,20 );
+            @include adaptiveValue("padding-right",202 ,20 );
+            background: url(../img/choose/bg.png);
+            position: absolute;
+            top: rem(150);
+            right: 0;
+
       }
 
       // .choose__title
 
       &__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",56 ,24 );
+            @include adaptiveValue("line-height",68 ,29 );
+            color: #FFFFFF;
       }
 
       // .choose__subtitle
 
       &__subtitle {
+            font-style: normal;
+            font-weight: 400;
+            @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height",33 ,23 );
+            color: #FFFFFF;
+            @include adaptiveValue("padding-top", 32, 15);
       }
 
       // .choose__shop
 
       &__shop {
+            display: flex;
+            align-items: center;
+            gap:rem(10);
+            @include adaptiveValue("padding-top",32 ,20 );
       }
 
       // .choose__link
 
       &__link {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height",24 ,17 );
+            color: #FFFFFF;
+
       }
 
       // .choose__image
 
       &__image {
+           position: absolute;
+           top: rem(865);
+           z-index: 5;
+           right: rem(202);
+           @media (max-width:$mobile){
+             display: none; 
+           }
       }
 }
-.swiper {
+.swiper-tell {
+      
 }
 .swiper-wrapper {
 }
 .swiper-slide {
+}
+/////////////////////////////////
+.customer {
+
+      // .customer__container
+
+      &__container {
+            @include adaptiveValue("padding-top",231 ,60 );
+            @include adaptiveValue("padding-left",168 ,90 );
+      }
+
+      // .customer__top
+
+      &__top {
+            @include adaptiveValue("padding-right",900 ,100 );
+      }
+
+      // .customer__icon
+
+      &__icon {
+      }
+
+      // .customer__title
+
+      &__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",56 ,20 );
+            line-height: 68px;
+            color: #000000;
+            @include adaptiveValue("padding-top",40 ,30 );
+           
+      }
+
+      // .customer__subtitle
+
+      &__subtitle {
+            font-style: normal;
+            font-weight: 400;
+            @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height",33 ,23 );
+            @include adaptiveValue("padding-top",32 ,15 );
+            color: #808080;
+      }
+
+      // .customer__bottom
+
+      &__bottom {
+            @include adaptiveValue("padding-top",80 ,30 );
+      }
+
+      // .customer__cards
+
+      &__cards {
+            display: flex;
+            gap:rem(32);
+      }
+
+      // .customer__card
+
+      &__card {
+           
+            @include adaptiveValue("width",444 ,280 );
+            @include adaptiveValue("height",360 ,360 );
+            background: #FAF8F6;
+            border-radius: rem(16);
+            @include adaptiveValue("padding-top",40 ,30 );
+            @include adaptiveValue("padding-left",30 ,20 );
+            @include adaptiveValue("padding-bottom",30 ,20 );
+            @include adaptiveValue("padding-right",32 ,20 );
+            display: flex;
+            flex-direction: column;
+
+      }
+
+      // .customer__text
+
+      &__text {
+            display: flex;
+            flex-direction: column;
+            @include adaptiveValue("gap",20 ,15 );
+            flex: 1 1 auto;
+            img{
+                  width: rem(120);
+                  height: rem(19);
+            }
+      }
+
+      // .customer__inner
+
+      &__inner {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,16 );
+           @include adaptiveValue("line-height",24,19 );
+
+      }
+
+      // .customer__comment
+
+      &__comment {
+            font-style: normal;
+            font-weight: 400;
+            @include adaptiveValue("font-size",16 , 14);
+            @include adaptiveValue("line-height",28 ,24 );
+            color: #000000;
+      }
+
+      // .customer__actions
+
+      &__actions {
+            display: flex;
+            align-items: center;
+            gap: rem(15);
+
+      }
+
+      // .customer__autor
+
+      &__autor {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            @include adaptiveValue("font-size",16 ,14 );
+            @include adaptiveValue("line-height",22 ,19 );
+      }
+}
+
+//////////////////////////
+.started {
+position: relative;
+      // .started__container
+
+      &__container {
+            @include adaptiveValue("padding-top",100 ,60 );
+            @include adaptiveValue("padding-bottom",100 ,46 );
+      }
+
+      // .started__content
+
+      &__content {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+      }
+
+      // .started__title
+
+      &__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",56 ,24 );
+            @include adaptiveValue(" line-height", 68,28 );
+            text-align: center;
+            @include adaptiveValue("padding-top",49 ,29 );
+      }
+
+      // .started__subtitle
+
+      &__subtitle {
+            font-weight: 400;
+           @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height", 33, 23);
+            @include adaptiveValue("padding-top",40 ,15 );
+            text-align: center;
+            color: #808080;
+      }
+      &__br{
+            @media (max-width:$mobile){
+                   display: none; 
+            }
+      }
+      // .started__shop
+
+      &__shop {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: rem(8);
+            @include adaptiveValue("padding-top",32 ,20 );
+
+      }
+
+      // .started__link
+
+      &__link {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,14 );
+            @include adaptiveValue("line-height",24 ,17 );
+            color: #F27E58;
+            text-decoration: none;
+      }
+      &__button{
+            @include adaptiveValue("margin-top",46 ,20 );
+      }
+}
+.startes {
+
+      // .startes__actions
+
+      &__actions {
+      }
+}
+.button {
+
+      // .button__blue
+
+      &__blue {
+      }
+}
+.srated {
+
+      // .srated__decor-1
+
+      &__decor-1 {
+            position: absolute;
+            top: rem(188);
+            left: rem(152);
+      }
+
+      // .srated__decor-2
+
+      &__decor-2 {
+            position: absolute;
+            top: rem(77);
+            right: rem(0);
+      }
 }
