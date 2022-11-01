@@ -1,1 +1,62 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button {
+
+    // .button__blue
+
+    &__blue {
+        padding: rem(20) rem(62) ;
+        font-weight: 700;
+        @include adaptiveValue("font-size",20 ,16 );
+        line-height: math.div(33 ,20 );
+        text-align: center;
+        background: #6E5DDC;
+        border-radius: rem(200);
+        color: #FFFFFF;
+        transition: all 0.5s;
+      
+        @media (max-width:$mobile){
+             padding: rem(15) rem(30); 
+             font-weight: 700;
+            font-size: rem(16);
+            line-height: rem(19); 
+            font-family: 'Effra';
+            font-style: normal;  
+        }
+        &:hover{
+            background-color:  #F27E58;
+            transform: scale(1.1);
+        }
+    }
+}
+.link {
+  
+    // .link__shop
+
+    &__shop {
+        font-family: 'Effra';
+        font-style: normal;
+        font-weight: 500;
+       @include adaptiveValue("font-size",20 ,14 );
+        line-height: math.div(24 ,20 );
+        color: #F27E58;
+        text-decoration: none;
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+        img{
+            padding-top: rem(5);
+            @media (max-width:$mobile){
+                width: rem(8);
+                height: rem(8);
+                 padding-top: 0;
+            }
+        }
+        @media (max-width:$mobile){
+            font-weight: 500;
+            font-size: rem(14);
+            line-height: rem(17); 
+            
+        }
+    }
+}

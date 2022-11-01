@@ -7,7 +7,79 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-	
+				<section class="find">
+					<div class="find__content">
+						<div class="find__left">
+							<div class="find__container">
+								<div class="find__text">
+									<h1 class="find__title">Find out what <span>vitamins</span> your body needs right now.</h1>
+									<h3 class="find__subtitle">Answer a few simple questions and automatically
+										get a personalazed list of vitamins in minutes</h3>
+								</div>
+								<div class="find__actions">
+									<button type="button" class="button__blue">Take the quiz</button>
+									<a href="#" class="link__shop">
+										Go to the shop
+										<img src="@img/find/icon01.svg" alt="arrow icon">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="find__right">
+							<div class="find__image">
+								<!-- <img src="img/find/tablets.webp" alt=""> -->
+								<picture>
+									<source srcset="img/find/tablets-mob.png" media="(max-width:375px)">
+									<source srcset="img/find/tablets-mob02.png" media="(max-width:320px)">
+								 	<img src="@img/find/tablets.png" alt="tablets">
+									
+								</picture>
+							</div>
+							<div data-prlx-mouse data-prlx-cy="100" class="find__circle-big"></div>
+							<div data-prlx-mouse data-prlx-cx="10" class="find__circle-small"></div>
+						</div>
+						<img class="find__decor-1" src="@img/find/decor01.svg" alt="elipse">
+						<img  class="find__decor-2" src="@img/find/decor02.svg" alt="elipse">
+					</div>
+				</section>
+				<section class="heatly">
+					<div class="heatly__content">
+						<div class="heatly__top">
+							<div class="heatly__circle"></div>
+							<h2 class="heatly__title">Healthy doesn’t have to be hard. We make it easy.</h2>
+						</div>
+						<div class="heatly__bottom">
+							<div class="heatly__container">
+								<div class="heatly__information">
+									<div class="heatly__blok">
+										<img src="@img/heatly/icon01.svg" alt="icon">
+										<h3 class="heatly__subtitle">Healthy doesn’t have to be hard. We make it easy.</h3>
+									</div>
+									<div class="heatly__blok">
+										<img src="@img/heatly/icon02.svg" alt="icon">
+										<h3 class="heatly__subtitle">Healthy doesn’t have to be hard. We make it easy.</h3>
+									</div>
+									<div class="heatly__blok">
+										<img src="@img/heatly/icon03.svg" alt="icon">
+										<h3 class="heatly__subtitle">Healthy doesn’t have to be hard. We make it easy.</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="heatly__decor-1">
+							<picture>
+								<source srcset="img/heatly/decor1-mob-desc.png" media="(max-width:375px)">
+								<img src="@img/heatly/decor1-desc.png" alt="image tablets">
+							</picture>
+						</div>
+						<div class="heatly__decor-2">
+							<picture>
+								<source srcset="img/heatly/decor2-mob-desc.png" media="(max-width:375px)">
+								<img src="@img/heatly/decor2-desc.png" alt="image tablets">
+							</picture>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>
