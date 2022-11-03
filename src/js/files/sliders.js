@@ -105,16 +105,16 @@ function initSliders() {
 			}
 		});
 	}
-	 if (document.querySelector('.swiper-customer',)) { // Указываем скласс нужного слайдера
+	 if (document.querySelector('.choose__slider',)) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.swiper-customer', { // Указываем скласс нужного слайдера
+		new Swiper('.choose__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3,
-			spaceBetween: 32,
+			slidesPerView: 2,
+			spaceBetween: 33,
 			autoHeight: true,
 			speed: 800,
 

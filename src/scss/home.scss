@@ -169,10 +169,7 @@
             right: rem(74);
             z-index: 5;
             @media (max-width:$mobile){
-                   right: rem(30);
-                   top: rem(311);
-                   width: rem(60);
-                   height: rem(60);
+                   display: none;
             }
       }
 }
@@ -181,11 +178,18 @@
       transform: translateY(rem(-110));
       position: relative;
       // .heatly__content
+      @media (max-width:$mobile){
+            transform: translateY(rem(-117));
+      }
 
       &__content {
             display: grid;
             grid-template-columns: repeat(2,1fr);
             position: relative;
+      @media (max-width:$mobile){
+             display: flex;
+             flex-direction: column; 
+      }
       }
 
       // .heatly__top
@@ -206,6 +210,20 @@
       // .heatly__circle
 
       &__circle {
+            @include adaptiveValue("width",139 ,95 );
+            @include adaptiveValue("height",139 ,95 );
+            background-color: #FFCA78;
+            border-radius: 50%;
+            position: absolute;
+            top: rem(65);
+            left: rem(126);
+            @media (max-width:$mobile){
+                   width: rem(60); 
+                   height: rem(60);
+                   left: rem(298);
+                   top: rem(-30);
+                  
+            }
       }
 
       // .heatly__title
@@ -217,6 +235,19 @@
             @include adaptiveValue("font-size",56 ,24 );
             @include adaptiveValue("line-height", 68, 29);
             color: #FFFFFF;
+            @include adaptiveValue("padding-top", 354, 70);
+            @include adaptiveValue("padding-left",201 ,0 );
+            @include adaptiveValue("padding-right",135 ,0 );
+            @media (max-width:$mobile){
+                  font-weight: 500;
+                  font-size: rem(24);
+                  line-height: rem(29);
+                  text-align: center; 
+                  padding-top: rem(70);
+                  padding-right: rem(47);
+                  padding-left: rem(48);
+
+            }
       }
 
       // .heatly__bottom
@@ -232,28 +263,439 @@
       // .heatly__information
 
       &__information {
+            @include adaptiveValue("padding-right",202 ,0 );
+            display: flex;
+            flex-direction: column;
+            @include adaptiveValue("gap",104 ,40 );
+            @include adaptiveValue("padding-top",215 ,33 );
+            @include adaptiveValue("padding-left",40 ,0 );
+            @media (max-width:$mobile){
+                   padding-right: rem(0); 
+            }
       }
 
       // .heatly__blok
 
       &__blok {
+            display: flex;
+            align-items: center
       }
-
+      .blok-1{
+            @include adaptiveValue("gap",82,20 );
+            @media (max-width:$mobile){
+                   img{
+                        width: rem(46.4);
+                        height: rem(37.8)
+                   } 
+            }
+           
+      }
+      .blok-2{
+            @include adaptiveValue("gap",98 ,28 );
+            @media (max-width:$mobile){
+                  img{
+                       width: rem(39.2);
+                       height: rem(43.6)
+                  } 
+           }
+      }
+      .blok-3{
+            @include adaptiveValue("gap",99 ,30 );
+            @media (max-width:$mobile){
+                  img{
+                       width: rem(37.7);
+                       height: rem(48.1)
+                  } 
+           }
+      }
       // .heatly__subtitle
 
       &__subtitle {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",30 ,14 );
+            @include adaptiveValue(" line-height",36 ,17 );
+            @media (max-width:$mobile){
+                  font-weight: 500;
+                  font-size: rem(14);
+                  line-height: rem(17); 
+            }
       }
 
       // .heatly__decor-1
 
       &__decor-1 {
+            position: absolute;
+            @include adaptiveValue("top",682 ,382 );
+            @include adaptiveValue("left",202 ,100 );
+            z-index: 2;
+            transition:transform 0.5s ;
+            @media (max-width:$mobile){
+                   top: rem(488); 
+                   left: rem(0);
+            }
+            
+           
+      }
+      .hhv{
+            @media (any-hover: hover){
+                  &:hover{
+                        
+                        transform: scale(1.1);
+                        z-index: 3;
+                  }
+            }
+
       }
 
       // .heatly__decor-2
 
       &__decor-2 {
+            position: absolute;
+            @include adaptiveValue("top",859 ,382 );
+            @include adaptiveValue("right",321 ,100 );
+            transition:transform 0.5s ;
+            @media (max-width:$mobile){
+                   right: 0; 
+                   top: rem(553);
+            }
       }
 }
+/////////////////////////////////////////////
+.tell {
+      position: relative;
+      @include adaptiveValue("padding-top",408 ,282 );
+      // .tell_decor-1
+      @media (max-width:$mobile){
+             padding-top: rem(215); 
+
+      }
+
+      &_decor-1 {
+            position: absolute;
+            @include adaptiveValue("top",425,0 );
+            @include adaptiveValue("left",147 ,0 );
+            @media (max-width:$mobile){
+                   display: none; 
+            }
+
+      }
+
+      // .tell__container
+
+      &__container {
+      }
+
+      // .tell__content
+
+      &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+      }
+
+      // .tell__icon
+
+      &__icon {
+            padding-right: rem(5);
+            @media (max-width:$mobile){
+                   width: rem(50);
+                   height: rem(50); 
+                   padding-right: rem(0);
+            }
+      }
+
+      // .tell__title
+
+      &__title {
+            @include adaptiveValue("padding-left",500 ,0 );
+            @include adaptiveValue("padding-right",505,0 );
+            padding-top: rem(50);
+            @media (max-width:$mobile){
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: rem(24);
+                  line-height: rem(29);
+                  text-align: center; 
+                  padding-top: rem(30);
+            }
+      }
+
+      // .tell__subtitle
+
+      &__subtitle {
+            // @include adaptiveValue("padding-left",480,0 );
+            // @include adaptiveValue("padding-right",505,0 );  
+            padding-top: rem(28);
+            padding-right: rem(5);
+            @media (max-width:$mobile){
+                  font-weight: 400;
+                  font-size: rem(14);
+                  line-height: rem(23);
+                  text-align: center;
+                  color: #808080; 
+                  padding-top: rem(13);
+                  padding-left: rem(5);
+                  br{
+                        display: none
+                  }
+            }
+      }
+      &__btn{
+            @include adaptiveValue("margin-top",52 ,27 );
+            
+      }
+      // .tell__elipse-1
+
+      &__elipse-1 {
+      }
+
+      // .tell__circle
+
+      &__circle {
+            @include adaptiveValue("top",410,200 );
+            width: rem(95);
+            height: rem(95);
+            border-radius: 50%;
+            position: absolute;
+            background-color: #8172DD;
+            top:0 ;
+            z-index: 2;
+           @include adaptiveValue("right",222 ,-35 );
+           @media (max-width:$mobile){
+             width: rem(60);
+             height: rem(60); 
+
+           }
+      }
+
+      // .tell__decor-2
+
+      &__decor-2 {
+            position: absolute;
+            opacity: 0.1;
+            @include adaptiveValue("top",165 ,0 );
+            right: 0;
+            @media (max-width:$mobile){
+                   display: none; 
+            }
+      }
+
+      // .tell__elipse-2
+
+      &__elipse-2 {
+      }
+
+      // .tell__decor-3
+
+      &__decor-3 {
+            opacity: 0.1;
+            position: absolute;
+            right: 0;
+            @include adaptiveValue("top",865 ,0 );
+            @media (max-width:$mobile){
+                   display: none; 
+            }
+      }
+
+      // .tell__elipse-3
+
+      &__elipse-3 {
+           
+      }
+}
+/////////////////////////////////////////////////////
+.choose {
+      @include adaptiveValue("padding-top",149 ,60 );
+      position: relative;
+      // .choose__content
+
+      &__content {
+            display: flex;
+
+      }
+
+      // .choose__container
+
+      &__container {
+           
+      }
+
+      // .choose__swip
+
+      &__swip {
+            position: absolute;
+            top:rem(300);
+           @include adaptiveValue("left",202 ,20 );
+      }
+
+      // .choose__slider
+
+      &__slider {
+            width: rem(833);
+      }
+
+      // .choose__wrapper
+
+      &__wrapper {
+      }
+
+      // .choose__slide
+
+      &__slide {
+      }
+
+      // .choose__card
+
+      &__card {
+            @include adaptiveValue("padding-top",65 ,30 );
+            background: #89D4A7;
+            img{
+                  @include adaptiveValue("padding-left",107 ,96 );
+            }
+            
+      }
+
+      // .choose__descr
+
+      &__descr {
+            @include adaptiveValue("padding-left", 30,20 );
+            @include adaptiveValue("padding-top",52 ,21 );
+      }
+
+      // .choose__intro
+
+      &__intro {
+            font-weight: 600;
+            font-size: rem(14);
+           line-height: math.div(19 ,14 );
+            color: #FFFFFF;
+            opacity: 0.5;
+      }
+
+      // .choose__name
+
+      &__name {
+            font-family: 'Effra';
+            font-weight: 500;
+            @include adaptiveValue("font-size",24,18 );
+             line-height: math.div(29 ,24 );
+            color: #FFFFFF;
+            padding-top: rem(14);
+      }
+
+      // .choose__subneme
+
+      &__subneme {
+            ont-weight: 400;
+            @include adaptiveValue("font-size",16 ,14 );
+            line-height: math.div(26 ,16 );
+            color: #FFFFFF;
+            opacity: 0.7;
+            padding-top: rem(18);
+            padding-right: rem(35);
+      }
+      &__deco{
+            position: absolute;
+            @include adaptiveValue("top",868 ,0 );
+           right: rem(203);
+           transition: transform 0.5s;
+           @media (any-hover: hover){
+            &:hover{
+                  transform: scale(1.1);
+            }
+           }
+      }
+      // .choose__card-bg
+
+      &__card-bg {
+            background: #9C91E0;
+            @include adaptiveValue("padding-top",63 ,30 );
+           img{
+            @include adaptiveValue("padding-left",106 ,96 );
+           }
+
+           
+      }
+
+      // .choose__information
+
+      &__information {
+            @include adaptiveValue("width",900 ,375 );
+            @include adaptiveValue("height",825 ,375 );
+            background: url(../img/choose/bg.png);
+            justify-content: flex-end;
+            @include adaptiveValue("padding-top",234 ,59 );
+            @include adaptiveValue("padding-left",252 ,0 );
+         
+      }
+
+      // .choose__text
+
+      &__text {
+      }
+
+      // .choose__title
+
+      &__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",56 ,24 );
+            line-height: math.div( 67,54 );
+            @include adaptiveValue("padding-right",252 ,0 );
+            color: #FFFFFF;
+      }
+
+      // .choose__subtitle
+
+      &__subtitle {
+            font-style: normal;
+            font-weight: 400;
+            @include adaptiveValue("font-size",20 ,14 );
+            line-height: math.div( 32,20 );
+            color: #FFFFFF;
+            @include adaptiveValue("padding-top",30 ,15 );
+            @include adaptiveValue("padding-right",202 ,0 );
+            @media (max-width:$mobile){
+                   br{
+                        display: none
+                   } 
+            }
+      }
+
+      // .choose__shop
+
+      &__shop {
+            @include adaptiveValue("margin-top",36 ,20 );
+          
+            
+      }
+
+      // .choose__link
+
+      &__link {
+            display:flex;
+            align-items: center;
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,14 );
+            line-height: math.div( 24, 20);
+            color: #FFFFFF;
+            gap: rem(8);
+            text-decoration: none;
+      }
+}
+.card__choose{
+      @include adaptiveValue("width",400 ,335 );
+      @include adaptiveValue("height",494 ,352 );
+      border-radius: rem(16);
+}
+
+
 
 
 
