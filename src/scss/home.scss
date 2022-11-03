@@ -376,6 +376,12 @@
             position: absolute;
             @include adaptiveValue("top",425,0 );
             @include adaptiveValue("left",147 ,0 );
+            transition: all 0.8s;
+            @media (any-hover: hover){
+                  &:hover{
+                        transform: rotate(-90deg);
+                  }
+            }
             @media (max-width:$mobile){
                    display: none; 
             }
@@ -508,13 +514,15 @@
 }
 /////////////////////////////////////////////////////
 .choose {
-      @include adaptiveValue("padding-top",149 ,60 );
+      @include adaptiveValue("padding-top",149 ,58 );
       position: relative;
       // .choose__content
 
       &__content {
             display: flex;
-
+            @media (max-width:$mobile){
+                   display: block; 
+            }
       }
 
       // .choose__container
@@ -529,12 +537,23 @@
             position: absolute;
             top:rem(300);
            @include adaptiveValue("left",202 ,20 );
+           @media (max-width:$mobile){
+             left: 0; 
+             height: 100%;
+             width: 100%;
+             display: block;
+             top: rem(309);
+             padding-left:rem(20);
+           }
       }
 
       // .choose__slider
 
       &__slider {
             width: rem(833);
+            @media (max-width:$mobile){
+                   width: rem(680); 
+            }
       }
 
       // .choose__wrapper
@@ -607,6 +626,9 @@
                   transform: scale(1.1);
             }
            }
+           @media (max-width:$mobile){
+             display: none; 
+           }
       }
       // .choose__card-bg
 
@@ -626,9 +648,15 @@
             @include adaptiveValue("width",900 ,375 );
             @include adaptiveValue("height",825 ,375 );
             background: url(../img/choose/bg.png);
-            justify-content: flex-end;
-            @include adaptiveValue("padding-top",234 ,59 );
+           
+            @include adaptiveValue("padding-top",234 ,53 );
             @include adaptiveValue("padding-left",252 ,0 );
+            @media (max-width:$mobile){
+                   padding-left: rem(0); 
+                   background: url(../img/choose/bg-mob.png);
+                   height: rem(370);
+            }
+
          
       }
 
@@ -647,6 +675,13 @@
             line-height: math.div( 67,54 );
             @include adaptiveValue("padding-right",252 ,0 );
             color: #FFFFFF;
+            @media (max-width:$mobile){
+                  font-weight: 500;
+                  font-size: rem(24);
+                  line-height: rem(29); 
+                  text-align: center;
+                  padding-right: rem(16);
+            }
       }
 
       // .choose__subtitle
@@ -657,11 +692,18 @@
             @include adaptiveValue("font-size",20 ,14 );
             line-height: math.div( 32,20 );
             color: #FFFFFF;
-            @include adaptiveValue("padding-top",30 ,15 );
+            @include adaptiveValue("padding-top",30 ,12 );
             @include adaptiveValue("padding-right",202 ,0 );
             @media (max-width:$mobile){
+                  font-weight: 400;
+                  font-size: rem(14);
+                  line-height: rem(23);
+                  padding-left: rem(23);
+                  padding-right: rem(43);
+                  text-align: center;
                    br{
                         display: none
+
                    } 
             }
       }
@@ -687,15 +729,167 @@
             color: #FFFFFF;
             gap: rem(8);
             text-decoration: none;
+            @media (max-width:$mobile){
+                   padding-left: rem(134);
+                   font-weight: 500;
+                  font-size: rem(14);
+                  line-height: rem(17);
+                  gap:rem(5)
+            }
       }
 }
 .card__choose{
       @include adaptiveValue("width",400 ,335 );
       @include adaptiveValue("height",494 ,352 );
       border-radius: rem(16);
+      @media (max-width:$mobile){
+             width: rem(335); 
+             height: rem(352);
+      }
 }
 
 
+///////////////////////////////////////////////////////////
+.customer {
+      padding-top: rem(51);
+      // .customer__container
+
+      &__container {
+      }
+
+      // .customer__content
+
+      &__content {
+      }
+
+      // .customer__top
+
+      &__top {
+            @include adaptiveValue("padding-left",167 ,0 );
+      }
+
+      // .customer__title
+
+      &__title {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+           @include adaptiveValue("font-size",56 ,20 );
+           @include adaptiveValue("padding-top",42 ,30 );
+            line-height: math.div( 68, 56);
+            @media (max-width:$mobile){
+                  font-weight: 500;
+                  font-size:rem(24);
+                  line-height: rem(29); 
+                  padding-top: rem(30);
+                  br{
+                        display: none;
+                  }
+            }
+      }
+
+      // .customer__subtitle
+
+      &__subtitle {
+            font-weight: 400;
+            @include adaptiveValue("font-size",20 ,14 );
+            line-height: math.div(33 ,20 );
+            color: #808080;
+            @include adaptiveValue("padding-top",29 ,15 );
+            @media (max-width:$mobile){
+                   font-size: rem(14); 
+                   line-height: rem(23);
+                   padding-top: rem(15);
+                   br{
+                        display: none;
+                  }
+            }
+      }
+
+      // .customer__bottom
+
+      &__bottom {
+            padding-left: rem(168);
+      }
+
+      // .customer__swip
+
+      &__swip {
+      }
+
+      // .customer__slider
+
+      &__slider {
+      @include adaptiveValue("margin-top",80 ,30 );
+      width: rem(1396)
+      }
+
+      // .customer__wrapper
+
+      &__wrapper {
+      }
+
+      // .customer__slide
+
+      &__slide {
+      }
+
+      // .customer__card
+
+      &__card {
+            @include adaptiveValue("width",444 ,335 );
+            @include adaptiveValue("height",360 ,360 );
+            @include adaptiveValue("padding-top",40 ,30 );
+            @include adaptiveValue("padding-left",30 ,20 );
+            background: #FAF8F6;
+            border-radius: rem(16);
+            @media (max-width:$mobile){
+                   width: rem(335); 
+                   padding-top: rem(30);
+            }
+      }
+
+      // .customer__header
+
+      &__header {
+      }
+
+      // .customer__inner
+
+      &__inner {
+            font-family: 'Effra';
+            font-style: normal;
+            font-weight: 500;
+            @include adaptiveValue("font-size",20 ,16 );
+            line-height: math.div( 24,20 );
+            @media (max-width:$mobile){
+                 
+                  font-size: rem(16);
+                  line-height: rem(19); 
+            }
+      }
+
+      // .customer__subinner
+
+      &__subinner {
+      }
+
+      // .customer__autor
+
+      &__autor {
+      }
+
+      // .customer__name
+
+      &__name {
+      }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
 
 
 
