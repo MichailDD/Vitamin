@@ -592,6 +592,12 @@
            line-height: math.div(19 ,14 );
             color: #FFFFFF;
             opacity: 0.5;
+            @media (max-width:$mobile){
+                  opacity: 0.7;
+                  padding-top: rem(6);
+                  font-size: rem(12);
+                  line-height: rem(16); 
+            }
       }
 
       // .choose__name
@@ -603,6 +609,9 @@
              line-height: math.div(29 ,24 );
             color: #FFFFFF;
             padding-top: rem(14);
+            @media (max-width:$mobile){
+                   padding-top: rem(10); 
+            }
       }
 
       // .choose__subneme
@@ -615,6 +624,10 @@
             opacity: 0.7;
             padding-top: rem(18);
             padding-right: rem(35);
+            @media (max-width:$mobile){
+                   padding-top: rem(15);
+                   line-height: rem(19); 
+            }
       }
       &__deco{
             position: absolute;
@@ -752,6 +765,9 @@
 ///////////////////////////////////////////////////////////
 .customer {
       padding-top: rem(51);
+      @media (max-width:$mobile){
+             padding-top: rem(290); 
+      }
       // .customer__container
 
       &__container {
@@ -766,6 +782,16 @@
 
       &__top {
             @include adaptiveValue("padding-left",167 ,0 );
+            @media (max-width:$mobile){
+                   padding-left: rem(0); 
+               
+                   img{
+                        width: rem(50);
+                        height: rem(56.8);
+                        margin-left: rem(143);
+                        
+                   }
+            }
       }
 
       // .customer__title
@@ -779,9 +805,12 @@
             line-height: math.div( 68, 56);
             @media (max-width:$mobile){
                   font-weight: 500;
-                  font-size:rem(24);
-                  line-height: rem(29); 
-                  padding-top: rem(30);
+                  font-size:rem(20);
+                  line-height: rem(24); 
+                  padding-top: rem(32);
+                  padding-left: rem(40);
+                  padding-right: rem(35);
+                  text-align: center;
                   br{
                         display: none;
                   }
@@ -799,7 +828,9 @@
             @media (max-width:$mobile){
                    font-size: rem(14); 
                    line-height: rem(23);
-                   padding-top: rem(15);
+                   padding-top: rem(13);
+                  padding-left: rem(5);
+                  text-align: center;
                    br{
                         display: none;
                   }
@@ -810,18 +841,27 @@
 
       &__bottom {
             padding-left: rem(168);
+            @media (max-width:$mobile){
+                   padding-left: rem(0); 
+            }
       }
 
       // .customer__swip
 
       &__swip {
+            @media (max-width:$mobile){
+                 
+            }
       }
 
       // .customer__slider
 
       &__slider {
       @include adaptiveValue("margin-top",80 ,30 );
-      width: rem(1396)
+      width: rem(1396);
+      @media (max-width:$mobile){
+            width: rem(680);
+      }
       }
 
       // .customer__wrapper
@@ -832,6 +872,7 @@
       // .customer__slide
 
       &__slide {
+            
       }
 
       // .customer__card
@@ -841,17 +882,28 @@
             @include adaptiveValue("height",360 ,360 );
             @include adaptiveValue("padding-top",40 ,30 );
             @include adaptiveValue("padding-left",30 ,20 );
+            @include adaptiveValue("padding-right",34 ,20 );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             background: #FAF8F6;
             border-radius: rem(16);
             @media (max-width:$mobile){
                    width: rem(335); 
                    padding-top: rem(30);
+                   padding-left: rem(20);
             }
       }
 
       // .customer__header
 
       &__header {
+           
+            
+            img{
+                  max-width: rem(120);
+            }
+         
       }
 
       // .customer__inner
@@ -862,35 +914,193 @@
             font-weight: 500;
             @include adaptiveValue("font-size",20 ,16 );
             line-height: math.div( 24,20 );
+            padding-top: rem(20);
             @media (max-width:$mobile){
-                 
+                 padding-top: rem(17);
                   font-size: rem(16);
                   line-height: rem(19); 
+                  
             }
       }
 
       // .customer__subinner
 
       &__subinner {
+            font-weight: 400;
+            @include adaptiveValue("font-size",16 ,14 );
+           line-height: math.div(28 ,16 );
+           padding-top: rem(14);
+           @media (max-width:$mobile){
+             font-size: rem(14); 
+             line-height: rem(24);
+             padding-top: rem(13);
+           }
       }
 
       // .customer__autor
 
       &__autor {
+            display: flex;
+            padding-bottom: rem(30);
+            align-items: center;
+            gap: rem(15);
+            @media (max-width:$mobile){
+                  padding-bottom: rem(20); 
+            }
+           
       }
 
       // .customer__name
 
       &__name {
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: rem(22);
+            
+            @media (max-width:$mobile){
+                  font-weight: 600;
+                  font-size: rem(14);
+                  line-height: rem(19); 
+            }
       }
 }
-.swiper {
+///////////////////////////////////////////////
+.started {
+   
+@include adaptiveValue("padding-top",100 ,60 );
+position:relative ;
+@media (max-width:$mobile){
+       padding-top: rem(60); 
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+      // .started__container
 
+      &__container {
+            
+          
+      }
+
+      // .started__content
+
+      &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+          img{
+            width: rem(49.8);
+            height: rem(46)
+          }
+           
+      }
+
+      // .started__title
+
+      &__title {
+           
+            @include adaptiveValue("padding-top",49 ,29 );
+            @media (max-width:$mobile){
+                   padding-top: rem(32);
+                   font-weight: 500;
+                  font-size: rem(24);
+                  line-height: rem(29);
+                  text-align: center; 
+                   
+            }
+      
+
+      }
+
+      // .started__subtitle
+
+      &__subtitle {
+            @include adaptiveValue("padding-top",34 ,15 );
+            
+            @media (max-width:$mobile){
+                  padding-top: rem(12);
+                  font-weight: 400;
+                  font-size: rem(14);
+                  line-height: rem(23);
+                  text-align: center;
+                   br{
+                        display: none;
+                      
+                   } 
+            }
+      }
+
+      // .started__actions
+
+      &__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(32);
+            @include adaptiveValue("margin-top",52 ,30 );
+            @media (max-width:$mobile){
+                   margin-top: rem(20); 
+                   gap: rem(23);
+            }
+      }
+
+      // .started__btn
+
+      &__btn{
+           
+           @media (max-width:$mobile){
+             margin-top: rem(2); 
+           }
+            
+      }
+
+      // .started__shop
+
+      &__shop {
+           @media (max-width:$mobile){
+            font-weight: 500;
+            font-size: rem(14);
+            line-height: rem(17);
+            padding-left: rem(3);
+            img{
+                  width: rem(10);
+                  height: rem(10);
+            } 
+           }
+          
+      }
+
+      // .started__decor-1
+
+      &__decor-1 {
+            position: absolute;
+            @include adaptiveValue("top",190 ,100 );
+            @include adaptiveValue("left",122 ,0 );
+            transition: all 0.8s;
+            @media (max-width:$mobile){
+                   display: none; 
+            }
+          
+           
+           
+            
+      }
+
+      // .started__decor-2
+
+      &__decor-2 {
+           position: absolute;
+           @include adaptiveValue("top",77 ,30 );
+           right: 0;
+           @media (max-width:$mobile){
+            width: rem(76);
+            height: rem(80); 
+            transform: rotate(-90deg);
+            left: 0;
+            top: rem(45);
+     }
+          
+      }
+ 
+}
 
 
 
