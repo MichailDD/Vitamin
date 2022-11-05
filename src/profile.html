@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+                <section class="page__profile">
+                    <div class="page__container">
+                        <div class="page__content">
+                            <div data-tabs class="profile">
+                                <nav data-da=".menu__body,768"  data-tabs-titles class="profile__navigation">
+                                    <button type="button" class="profile__title _tab-active">Subscriptions</button>
+                                    <button type="button" class="profile__title">Orders</button>
+                                    <button type="button" class="profile__title">Account Overview</button>
+                                    <button type="button" class="profile__title">Payment methods</button>
+                                    <button type="button" class="profile__title">Change Password</button>
+                                    <button type="button" class="profile__title profile__title-bg">Sign out</button>
+                                </nav>
+                                <div data-tabs-body class="profile__content">
+                                    <div class="profile__body">
+                                        <div class="profile__blok">
+                                            <div class="profile__inner">Subscriptions</div>
+                                            <div class="profile__cards">
+                                                <div class="profile__card">
+                                                    <div class="profile__image profile__image-green">
+                                                        <img src="@img/profile/pic01.png" alt="tablets">
+                                                    </div>
+                                                    <div class="profile__information">
+                                                        <div class="profile__header">
+                                                            <div class="profile__left">
+                                                                <div class="profile__name profile__name-green">Minerals</div>
+                                                                <div class="profile__subname">2 х Standard Process Thymus PMG 90 Tablets</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <div class="profile__price">$84.00</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="profile__bottom">
+                                                            <div class="profile__left">
+                                                                <h3 class="profile__every">Shipment every 60 days</h3>
+                                                                <div class="profile__data">Next delivery: 28th Apr 2020</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <button type="button" class="button profile__btn ">Unsubscribe</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="profile__card">
+                                                    <div class="profile__image profile__image-rose">
+                                                        <img src="@img/profile/pic02.png" alt="tablets">
+                                                    </div>
+                                                    <div class="profile__information">
+                                                        <div class="profile__header">
+                                                            <div class="profile__left">
+                                                                <div class="profile__name profile__name-rose">Prenatal Vitamins</div>
+                                                                <div class="profile__subname">1 x Ortho Molecular Products Adrene Vive Capsules</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <div class="profile__price">$31.26</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="profile__bottom">
+                                                            <div class="profile__left">
+                                                                <h3 class="profile__every">Shipment every 30 days</h3>
+                                                                <div class="profile__data">Next shipment: 19th Apr 2020</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <button type="button" class="button profile__btn ">Unsubscribe</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="profile__card">
+                                                    <div class="profile__image profile__image-pur">
+                                                        <img src="@img/profile/pic03.png" alt="tablets">
+                                                    </div>
+                                                    <div class="profile__information">
+                                                        <div class="profile__header">
+                                                            <div class="profile__left">
+                                                                <div class="profile__name profile__name-pur">Vitamins & Dietary Supplements</div>
+                                                                <div class="profile__subname">3 x Metagenics - 500-C Methoxyflavone</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <div class="profile__price">$32.45</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="profile__bottom">
+                                                            <div class="profile__left">
+                                                                <h3 class="profile__every">Shipment every 40 days</h3>
+                                                                <div class="profile__data">Next delivery: 15th Apr 2020</div>
+                                                            </div>
+                                                            <div class="profile__right">
+                                                                <button type="button" class="button profile__btn ">Unsubscribe</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="profile__body">
+                                     
+                                    </div>
+                                    <div class="profile__body">
+                                        Содержимое третьего таба
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
