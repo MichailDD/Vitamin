@@ -42,8 +42,8 @@
         transition: all 0.4s;
         @media (any-hover: hover){
             &:hover{
-                font-weight: 700;
                 transform: scale(1.1);
+                
             }
         }
 
@@ -285,9 +285,57 @@ background-color: #94D6BE;
         }
     }
 
+}
+.profile {
+
+    // .profile__body
+
+    &__body {
+    }
+
+    // .profile__inner
+
+    &__inner {
+    }
+
+    // .profile__image
+
+    &__image {
+    }
+
+    // .profile__image-green
+
+    &__image-green {
+    }
+
+    // .profile__name-green
+
+    &__name-green {
+    }
+
+    // .profile__subname
+
+    &__subname {
+    }
+
+    // .profile__price
+
+    &__price {
+    }
+
+    // .profile__image-rose
+
+    &__image-rose {
+    }
+
     // .profile__name-rose
 
     &__name-rose {
+    }
+
+    // .profile__image-pur
+
+    &__image-pur {
     }
 
     // .profile__name-pur
@@ -295,12 +343,214 @@ background-color: #94D6BE;
     &__name-pur {
     }
 }
-// . {
+.order {
 
-//     // ._tab-active
+    // .order__title
 
-//     &_tab-active {
-//     }
-// }
+    &__title {
+    }
+
+    // .order__header
+
+    &__header {
+        @include adaptiveValue("margin-top",40 ,20 );
+    }
+
+    // .order__head
+
+    &__head {
+    }
+
+    // .order__shiping
+
+    &__shiping {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .order__data
+
+    &__data {
+        font-weight: 400;
+@include adaptiveValue("font-size",18 ,14 );
+line-height: math.div(25 ,18 );
+color: #000000;
+opacity: 0.5;
+@media (max-width:$mobile){
+    font-size: rem(14);
+    line-height: rem(19); 
+}
+    }
+
+    // .order__ship
+
+    &__ship {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: rem(25);
+        @media (max-width:$mobile){
+            font-size: rem(14);
+            line-height: rem(19);
+            opacity: 0.5; 
+        }
+    }
+
+    // .order__number
+
+    &__number {
+        font-family: 'Effra';
+        font-style: normal;
+        font-weight: 500;
+        font-size: rem(22);
+        line-height: math.div(27 ,22 );
+        text-align: left;
+        padding-top: rem(9);
+        @media (max-width:$mobile){
+            font-size: rem(20);
+            line-height: rem(24)
+              
+        }
+    }
+
+    // .order__footer
+
+    &__footer {
+    }
+}
+.spollers {
+
+    // .spollers__item
+
+    &__item {
+    }
+
+    // .spollers__title
+
+    &__title {
+        padding: rem(40) rem(40) rem(0) rem(40);
+        @include adaptiveValue("width",1039 ,335 );
+        background: #FAF8F6;
+        border-radius: rem(16) rem(16) rem(0) rem(0);
+        @media (max-width:$mobile){
+             width: rem(335); 
+        }
+        
+    }
+
+    // .spollers__body
+
+    &__body {
+        background: #FAF8F6;
+        border-radius: rem(0) rem(0) rem(16) rem(16);
+        &-top{
+            @include adaptiveValue("width",1039 ,335 );
+            @include adaptiveValue("height",690 ,647 );
+         
+            @media (max-width:$mobile){
+                 width: rem(335);
+                 height: rem(647); 
+            }
+
+        }
+        &-bottom{
+
+        }
+
+    }
+}
+.spoler {
+
+    // .spoler__header
+
+    &__header {
+        padding: rem(40) rem(40) rem(0) rem(40);
+    }
+
+    // .spoler__cards
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+        @media (max-width:$mobile){
+            padding: rem(30) rem(20) rem(0) rem(20); 
+        }
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
+    }
+
+    // .spoler__card
+
+    &__card {
+        display: flex;
+        gap: rem(30);
+        &-rose{
+           
+        }
+    }
+
+    // .spoler__image
+
+    &__image {
+    }
+
+    // .spoler__information
+
+    &__information {
+        padding-top: rem(15);
+    }
+
+    // .spoler__name
+
+    &__name {
+    }
+
+    // .spoler__subname
+
+    &__subname {
+    }
+
+    // .spoler__price
+
+    &__price {
+    }
+
+    // .spoler__inner
+
+    &__inner {
+    }
+
+    // .spoler__footer
+
+    &__footer {
+    }
+
+    // .spoler__result
+
+    &__result {
+    }
+
+    // .spoler__amount
+
+    &__amount {
+    }
+
+    // .spoler__summ
+
+    &__summ {
+    }
+
+    // .spoler__button
+
+    &__button {
+    }
+
+    // .spoler__btn
+
+    &__btn {
+    }
+}
 .button {
 }
+
