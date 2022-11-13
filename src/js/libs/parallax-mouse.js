@@ -1,8 +1,4 @@
-// Модуль параллакса мышью 
-// (c) Фрилансер по жизни, Хмурый Кот
-// Документация: 
 
-// Подключение функционала "Чертогов Фрилансера"
 import { isMobile, FLS } from "../files/functions.js";
 import { flsModules } from "../files/modules.js";
 

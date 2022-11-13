@@ -59,7 +59,8 @@
     // .profile__content
 
     &__content {
-        @include adaptiveValue("padding-top",50 ,30 );
+       padding-top: rem(50);
+      
         
     }
 
@@ -110,6 +111,10 @@
         border-radius: rem(16);
         @media (max-width:$mobile){
             height: rem(402); 
+            flex-direction: column;
+            padding: rem(20) rem(20);
+            width: rem(335);
+            height: rem(402);
         }
     }
 
@@ -122,15 +127,21 @@
         display: flex;
         justify-content:center;
         align-items: center;
+        @media (max-width:$mobile){
+            width: rem(295);
+            height: rem(132); 
+       }
         img{
             transition: all 0.5s;
             @media (any-hover: hover){
                 &:hover{
-                    transform: scale(1.4);
+                    transform: scale(1.1);
                 }
+             
             }
+            
         }
-
+      
 
     }
     &__image-green {
@@ -165,6 +176,9 @@ background-color: #94D6BE;
 
     &__left {
         flex: 1 1 auto;
+       
+     
+            
     }
 
     // .profile__name
@@ -204,6 +218,9 @@ background-color: #94D6BE;
             line-height: rem(19); 
         }
        line-height: math.div(24 ,20 );
+       &-gr{
+        padding-right: rem(10);
+       }
     }
 
     // .profile__right
@@ -228,6 +245,9 @@ background-color: #94D6BE;
 
     &__bottom {
         display: flex;
+        @media (max-width:$mobile){
+             flex-direction: column; 
+        }
     }
 
     // .profile__every
